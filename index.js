@@ -44,9 +44,9 @@ var storage = multer.diskStorage({
     );
   },
 });
- 
+
 var maxSize = 10000 * 1024 * 1024;
- 
+
 var upload = multer({
   storage: storage,
   limits: { fileSize: maxSize },
@@ -86,6 +86,6 @@ app.get("/download", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("App is listening on port 3000");
 });
