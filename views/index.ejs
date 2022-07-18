@@ -169,7 +169,9 @@
             $("#upload-input").val("");
             $("#section").show();
             $("#result").show();
-            $(".copy-input").val("http://localhost:3000/files/" + data.path);
+            $(".copy-input").val(
+              "https://fshareapp.herokuapp.com/files/" + data.path
+            );
           },
           xhr: function () {
             // create an XMLHttpRequest
